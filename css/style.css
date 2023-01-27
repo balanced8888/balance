@@ -242,7 +242,11 @@ ul.footer-menu li {
 	display: inline;
 	margin: 0 5px;
 }
-
+.copyright {
+	padding: 20px;
+	word-wrap: break-word;
+  }
+  
 a.scrollup{
 	height:30px;
 	width:32px;
