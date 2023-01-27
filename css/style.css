@@ -81,6 +81,17 @@ ul.nav-pills  {
 	padding:5px;
 }
 
+.slider img {
+	animation: rocking 8s ease-in-out infinite;
+  }
+  
+  @keyframes rocking {
+	0% { transform: rotate(3deg); }
+	50% { transform: rotate(-3deg); }
+	100% { transform: rotate(3deg); }
+  }
+  
+
 .nav-pills > li > a {
   border-radius: 0px;
 }
@@ -187,6 +198,8 @@ img.img-polaroid {
 .img-box {
 	max-width:100%;
 }
+
+
 .slider img {
 	width: 65%;
 	height: auto;
