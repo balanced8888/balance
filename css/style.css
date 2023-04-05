@@ -18,6 +18,9 @@ body {
 	color:#000000;
 	overflow-x:hidden;
  }
+ 
+ 
+ 
 #frank {
 	margin-top: 120px;
 	margin-bottom: 120px;
@@ -265,3 +268,39 @@ a.scrollup:hover{
 	opacity:1;
 	color:#fff;
 }
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: #000000; /* set background color */
+	padding: 20px; /* set padding */
+  }
+  
+  .iframe-wrapper {
+	width: 100%;
+	max-width: 700px; /* set maximum width */
+	margin: 10px; /* set margin */
+	border-radius: 10px; /* You can adjust the value of the border-radius to change the amount of rounding */
+	
+  }
+  
+  iframe {
+	display: block;
+	border: 1px solid #FFFFFF; /* set white border */
+	width: 400px;
+	height: 600px; /* set height */
+	border-radius: 10px
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.flex-container {
+	  flex-wrap: nowrap;
+	}
+	.iframe-wrapper {
+	  width: auto;
+	  margin: 0 10px; /* set margin */
+	}
+  }
+  
