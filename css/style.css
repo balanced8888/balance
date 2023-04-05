@@ -290,6 +290,7 @@ a.scrollup:hover{
 	display: block;
 	border: 1px solid #FFFFFF; /* set white border */
 	width: 400px;
+	min-width: auto;
 	height: 600px; /* set height */
 	border-radius: 10px
   }
