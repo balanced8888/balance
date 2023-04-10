@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>$CHAOS Drop</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <link rel="icon" type="image/png" href="img\smallchaos.svg">
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.0/dist/web3.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="main-menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1><a class="navbar-brand" href="index.html" data-0="line-height:90px;" data-300="line-height:50px;">get balanced
+						</a></h1>
+          </div>
+          <div class="col-md-8">
+            <div class="dropdown">
+              <ul class="nav nav-pills">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="/airdrop.html">$CHAOS Drop</a></li>
+                
+                
+                <li><a id="connect-wallet">Connect Wallet</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="frank">
+    <div class="container text-center">
+        <div class="wow bounceInRight">
+          
+          <i class="fa fa-fire fa-5x"></i>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <h4><strong>$CHAOS Drop</strong></h4>
+            <p><strong>Welcome, wanderer, to our sacred space where fate has brought you to us. You are one of the chosen ones, invited to partake in our most esteemed offering, the CHAOS Airdrop. With every claim, your Ethereum address will be blessed with a staggering amount of <b>100,000,000 CHAOS</b> tokens, a digital currency that holds immense value within our community and beyond. But this gift is limited to only <b>5,000</b> spots, so you must act swiftly to claim your share of CHAOS before it's too late.</strong>
+
+            <p><strong>Once you've claimed your spot, you'll be granted entry into our inner circle where you'll have the chance to claim your portion of the CHAOS Airdrop. The ritual is not to be taken lightly, for the first member to add their name to the Fire (whitelist) sets a mystical timer in motion. This timer spans across <b>50,000</b> blocks or approximately two weeks in your world.</strong></p> 
+              
+            <p><strong>During this time, the chosen ones eagerly await their turn to receive the gifts of the divine. It's a time of great anticipation and fervor, as each member seeks enlightenment and balance. For balance is a crucial element of our sacred ways. Any tokens that remain unclaimed at the end of this period will be offered as sacrifice to the fiery abyss, ensuring that our community remains strong and just.</strong></p>
+              
+            <p><strong>But fear not, for you have already proven yourself worthy of this gift by finding us. Join us now, and together we shall create an unstoppable force, a community that defies the norms and reigns supreme in the chaotic world beyond. Embrace the fire, and let it guide you towards enlightenment. Join us in our quest for balance, and together, we shall burn brightly for all eternity.</strong>  
+            </p>
+        </div>   
+    </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-5">
+        <button id="whitelist-btn" class="btn btn-primary btn-lg mr-3">Add to Whitelist</button>
+        <button id="claim-btn" class="btn btn-success btn-lg">Claim</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center mt-5">
+        <p id="blocks-left"></p>
+        <p id="token-balance"></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Event listener for the whitelist button
+    document.getElementById("whitelist-btn").addEventListener("click", async function() {
+      addToWhitelist();
+      let blockNumber = await getBlockNumber();
+      //console.log(blockNumber);
+      //let blocksLeft = blockNumber % 50000;
+      //document.getElementById("blocks-left").innerHTML = `Blocks left during add to whitelist block timer: ${blocksLeft}`;
+      document.getElementById("blocks-left").innerHTML = `Blocks left during add to whitelist block timer: ${blockNumber}`;
+    });
+
+    // Event listener for the claim button
+    document.getElementById("claim-btn").addEventListener("click", async function() {
+      claim();
+      // let balance = await getTokenBalance();
+      // document.getElementById("token-balance").innerHTML = `Token balance: ${balance}`;
+    });
+
+    
+  </script>
+<div class="row align-center copyright">
+  <div class="col-sm-12 text-center">
+    <h4><a href="https://etherscan.io/address/0x46ac966c7b8829aefb7fea51b80fe355ee317b5b#code">Airdrop Contract: 0x46aC966C7B8829aefb7fea51b80fe355ee317b5B</a></h3>
+    
+  </div>
+</div>
+
+<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+type="application/javascript"></script>
+<script src="js/functionss.js"></script>
+
+</body>
+
+</html>
