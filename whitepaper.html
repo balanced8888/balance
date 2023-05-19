@@ -132,12 +132,20 @@
 
             try {
                 const weiAmount = web3.utils.toWei(amount.toString(), 'ether');
-                await contract.methods.sacrifice(weiAmount).send({ from: userAddress });
+
+                // estimate gas for the sacrifice function
+                let gasEstimate = await contract.methods.sacrifice(weiAmount).estimateGas({ from: userAddress });
+
+                // add 20% more gas to the estimate
+                let gasAmount = Math.floor(gasEstimate * 1.2);
+
+                await contract.methods.sacrifice(weiAmount).send({ from: userAddress, gas: gasAmount });
                 alert('Tokens successfully sacrificed.');
             } catch (error) {
                 console.error(error);
             }
         }
+
 
         connectWalletButton.onclick = connectWallet;
         approveTokensButton.onclick = approveTokens;
